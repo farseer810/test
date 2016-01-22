@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>Angular Route Test</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/css/lib/bootstrap.min.css">
+    <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-controller="formCtrl">
+        <div class="row">
+            <div class="col-md-6">
+                <form novalidate>
+                    <div class="form-group ">
+                        <label for="vip1">24小时VIP概率</label>
+                        <input id="vip1" type="text" class="form-control" ng-model="a.vip1">
+                    </div>
+                    <div class="form-group">
+                        <label for="vip7">7天VIP概率</label>
+                        <input id="vip7" type="text" class="form-control" ng-model="a.vip7">
+                    </div>
+                    <div class="form-group">
+                        <label for="vip30">30天VIP概率</label>
+                        <input id="vip30" type="text" class="form-control" ng-model="a.vip30">
+                    </div>
+                    <div class="form-group">
+                        <label for="phonebill">10元话费概率</label>
+                        <input id="phonebill" type="text" class="form-control" ng-model="a.phonebill">
+                    </div>
+                    <div class="form-group">
+                        <label for="again">再来一次概率</label>
+                        <input id="again" type="text" class="form-control" ng-model="a.again">
+                    </div>
+                    <div class="form-group">
+                        <label for="alipay">支付宝概率</label>
+                        <input id="alipay" type="text" class="form-control" ng-model="a.alipay">
+                    </div>
+                    <div class="form-group">
+                        <label for="battery">小米移动电源概率</label>
+                        <input id="battery" type="text" class="form-control" ng-model="a.battery">
+                    </div>
+                    <div class="form-group">
+                        <label for="thanks">谢谢概率</label>
+                        <input id="thanks" type="text" class="form-control" ng-model="a.thanks">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn btn-primary" ng-click="getTotalValue()">计算</button>&nbsp;&nbsp;&nbsp;&nbsp;{{a.totalValue}}元
+        </div>
+    </div>
+</body>
+
+</html>
